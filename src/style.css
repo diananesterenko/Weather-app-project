@@ -95,7 +95,7 @@ body{
     margin: 0 auto;
   }
   #day{
-    padding-left: 30%;
+    padding-left: 40%;
   }
   .degree-line{
     font-size: 30px;
@@ -118,20 +118,21 @@ body{
   }
   .weathermarkers {
     display: flex;
-    
+    flex-direction: column;
     justify-content: space-between;
     text-align: center;
     padding-top: 30px;
+
   }
-  .weathermarkers p{
+  #markersLabel{
+    text-align: center;
     margin: 0 auto;
+    margin-bottom: 5px;
   }
-  .weathermarkers div{
-   
-  }
-  .weathermarkers div.col2 {
+  .weathermarkers .col2 {
     padding: 0px 3px;
-    margin-right: 15px;
+    margin: 0px 15px 10px 0px;
+    width: 50px;
   }
   .vl {
     border-left: 2px solid #a3aab0;
@@ -151,6 +152,8 @@ body{
     font-size: 18px;
     padding: 3px 0 3px 0;
     text-align: center;
+    width: 65%;
+    margin-bottom: 10px;
   }
   #weather-icon{
     max-width: 70%;
@@ -183,15 +186,85 @@ body{
     border-radius: 3px;
     background-color: #b9b9b93a;
     font-size: 18px;
-    margin: 0px 1px;
+    margin: 0px 1px 10px 0px;
+    width: 70px;
  
   }
   
-  .forecastmiddle img {
-    margin: 15px 0 15px 0;
+  #weekIcon {
+    margin: 10px 0 10px 0;
   
-    width: 70%;
+    width: 85%;
   }
   .weektemp h2 {
     text-shadow: 1px 1px #bbada9;
+  }
+  .week-forecast-temperatures{
+    margin-bottom: 7px;
+  }
+  .week-forecast-tempMax{
+    font-weight: 200;
+  }
+  .week-forecast-tempMin{
+    opacity: 85%;
+  }
+  .CF {
+    display: flex;
+    font-size: 18px;
+  }
+  .CF p {
+    color: #d3d3d3be;
+    padding-left: 10px;
+    background-color: none;
+    padding-top: 10px;
+    font-weight: bold;
+    text-shadow: 3px -1px rgb(55, 55, 55);
+  }
+  #CFline {
+    color: rgb(41, 40, 40);
+    text-shadow: none;
+  }
+  #celcium:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+ 
+  #farenheit:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .active {
+    text-decoration: underline;
+  }
+  @media (min-width: 994px){
+    .week-forecast .row{
+      margin-left: 20px;
+    }
+  }
+  @media (max-width: 444px){
+    .city-date-main .col-1{
+      display: none;
+    }
+    .city-date-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+     
+    }
+    .iconAndDiscr{
+      margin: 0 auto;
+      justify-content: center;
+      text-align: center;
+      width: 200px;
+    }
+    .weatherdate2colmn{
+      margin: 0 auto;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+    }
+    .submit{
+      width: 50px;
+    }
   }

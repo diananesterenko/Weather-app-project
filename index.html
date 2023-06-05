@@ -34,7 +34,7 @@
 
             <div class="city-date">
                 <h2 id="city"></h2>
-                <div class="row">
+                <div class="row city-date-main">
                     <div class="col-5 iconAndDiscr" >
                         
                         <img src="" alt="sun" id="weather-icon">
@@ -43,7 +43,7 @@
                     <div class="col-1"></div>
                     <div class="col-6 weatherdate2colmn">
                         <div class="date">
-                        <div class="row degree-line" ><strong id="degrees"></strong><p>°C</p></div> 
+                        <div class="row degree-line" ><strong id="degrees"></strong><span> </span><div class="CF"><span id="celcium"> °C </span><span id="CFline"> |</span><span id="farenheit">°F</span></div></div> 
                             <div class="row">
                             <div class="row"><p id="day"></p></div>        
                             <div class="row"><p id="dateElem"></p></div>
@@ -72,14 +72,51 @@
             <div class="weather-markers ">
     
 
-                <div class="col2 "><p>Wind</p><div class="value" id="wind">3</div></div>
+                <div class="col2 row">
+                    <div class="col-5">
+                        <p id="markersLabel">Wind</p>
+                    </div>
+                    <div class="col-7">
+                        <div class="value" id="wind">3</div>
+                    </div>
+                </div>
                
-                <div class="col2"><p id="pHum">Humidity</p><div class="value" id="humidity">0</div></div>
-                <div class="col2 vldiv"><div class="vl"></div></div>
+                <div class="col2 row" >
+                    <div class="col-5">
+                        <p id="markersLabel">Humidity</p>
+                    </div>
+                    <div class="col-7">
+                        <div class="value" id="humidity">0</div>
+                    </div>
+                    
+                    
+                </div>
+                
                  
-                <div class="col2 "><p>Sunrise</p><div class="value" id="sunrise">05:27</div></div>
+                <div class="col2 row">
+                    <div class="col-5">
+                        <p id="markersLabel">Sunrise</p>
+                    </div>
+                    <div class="col-7">
+                        <div class="value" id="sunrise">05:27</div>
+                    </div>
+
+
+
+                  
+                </div>
                
-                <div class="col2"><p>Sunset</p><div class="value" id="sunset">21:32</div></div>
+                <div class="col2 row">
+                    <div class="col-5">
+                        <p id="markersLabel">Sunset</p>
+                    </div>
+                    <div class="col-7">
+                        <div class="value" id="sunset">21:32</div>
+                    </div>
+
+
+                    
+                </div>
                 
                 
             </div>
