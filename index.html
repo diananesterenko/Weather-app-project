@@ -35,16 +35,22 @@
             <div class="city-date">
                 <h2 id="city"></h2>
                 <div class="row">
-                    <div class="col-5" >
-                        <p id="description">Sunny</p>
-                        <p id="weather-icon">  </p>
+                    <div class="col-5 iconAndDiscr" >
+                        
+                        <img src="" alt="sun" id="weather-icon">
+                        <p id="description"></p>
                     </div>
                     <div class="col-1"></div>
                     <div class="col-6 weatherdate2colmn">
                         <div class="date">
                         <div class="row degree-line" ><strong id="degrees"></strong><p>°C</p></div> 
-                        <div class="row"><p id="day">Monday</p></div>
-                        <div class="row"><p id="hours">10</p>: <p id="minutes">10</p> </div>
+                            <div class="row">
+                            <div class="row"><p id="day"></p></div>        
+                            <div class="row"><p id="dateElem"></p></div>
+                            
+                            
+                            </div>
+                       
                         </div>
                         <div class="tempLowHigh">
                             <div class="row">
@@ -63,19 +69,25 @@
                     </div>
                 </div>
             </div>
-            <div class="weather-markers row">
+            <div class="weather-markers ">
     
 
-                <div class="col-2 "><p>Wind</p><div class="value" id="wind">3km/h</div></div>
-                <div class="col-1 vldiv"><div class="vl"></div></div>   
-                <div class="col-2"><p id="pHum">Humidity</p><div class="value" id="humidity">0%</div></div>
-                <div class="col-2 vldiv"><div class="vl"></div></div>
+                <div class="col2 "><p>Wind</p><div class="value" id="wind">3</div></div>
+               
+                <div class="col2"><p id="pHum">Humidity</p><div class="value" id="humidity">0</div></div>
+                <div class="col2 vldiv"><div class="vl"></div></div>
                  
-                <div class="col-2 "><p>Sunrise</p><div class="value" id="sunrise">05:27</div></div>
-                <div class="col-1 vldiv"><div class="vl"></div></div>
-                <div class="col-2"><p>Sunset</p><div class="value" id="sunset">21:32</div></div>
+                <div class="col2 "><p>Sunrise</p><div class="value" id="sunrise">05:27</div></div>
+               
+                <div class="col2"><p>Sunset</p><div class="value" id="sunset">21:32</div></div>
                 
                 
+            </div>
+            <div class="row " >
+               <div class="col-12 week-forecast" id="week-forecast">
+
+               </div>
+
             </div>
         </div>
     </div>

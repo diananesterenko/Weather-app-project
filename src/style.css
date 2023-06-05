@@ -25,9 +25,13 @@ body{
    line-height: 28px;
  
 }
-.description{
+#description{
     font-style: italic;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -90,6 +94,9 @@ body{
   .date{
     margin: 0 auto;
   }
+  #day{
+    padding-left: 30%;
+  }
   .degree-line{
     font-size: 30px;
   }
@@ -110,14 +117,21 @@ body{
     margin: 0px;
   }
   .weathermarkers {
+    display: flex;
+    
+    justify-content: space-between;
     text-align: center;
     padding-top: 30px;
   }
   .weathermarkers p{
     margin: 0 auto;
   }
-  .weathermarkers div.col-2 {
+  .weathermarkers div{
+   
+  }
+  .weathermarkers div.col2 {
     padding: 0px 3px;
+    margin-right: 15px;
   }
   .vl {
     border-left: 2px solid #a3aab0;
@@ -136,4 +150,48 @@ body{
     background-color: #b9b9b93a;
     font-size: 18px;
     padding: 3px 0 3px 0;
+    text-align: center;
+  }
+  #weather-icon{
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 15px;
+  }
+
+  .week-forecast .row {
+    display: flex;
+    margin: auto 0;
+   justify-content: space-around;
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+    max-width: 500px;
+  }
+  .week-forecast-date {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid #a3aab0;
+    
+  }
+  .week-forecast .col2 {
+    box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+    padding: 10px 3px 0 3px;
+    border: 3px solid none;
+    border-radius: 3px;
+    background-color: #b9b9b93a;
+    font-size: 18px;
+    margin: 0px 1px;
+ 
+  }
+  
+  .forecastmiddle img {
+    margin: 15px 0 15px 0;
+  
+    width: 70%;
+  }
+  .weektemp h2 {
+    text-shadow: 1px 1px #bbada9;
   }
