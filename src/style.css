@@ -1,0 +1,139 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(https://phonoteka.org/uploads/posts/2022-01/thumbs/1643268908_60-phonoteka-org-p-pogoda-fon-69.jpg);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size:cover;
+}
+.weather-app{
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    opacity: 0.9;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+}
+.weather-app h1 {
+    color: rgb(209, 209, 209);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.268);
+    font-size: 36px;
+  }
+#city{
+   font-size: 30px;
+   font-weight: 250;
+
+   line-height: 28px;
+ 
+}
+.description{
+    font-style: italic;
+}
+.container {
+    display: flex;
+    justify-content: center;
+  }
+.search{
+    background-color: #b0a09b5e;
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 14px;
+    height: 35px;
+    width: 100%;
+    padding: 0 40px;
+    margin-right: 40px;
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/831/original/sound.png?1657298218);
+    background-position: 90%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.268);
+}
+.search::placeholder{
+    font-style: italic;
+    font-size: 18px;
+    color: rgb(41, 40, 40);
+    
+}
+.submit {
+    box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+    border: 2px solid rgb(185, 185, 185);
+    background-color: #b0a09b5e;
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/830/original/search.png?1657298154);
+    background-size: 30%;
+    height: 35px;
+    width: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 16px;
+  }
+  #current {
+   
+    background-image: none;
+    padding-left: 5px;
+    color: rgb(41, 40, 40);
+    cursor: pointer;
+  }
+  .city-date {
+    box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 24px;
+    background-color: #b9b9b93a;
+    padding: 15px 20px 20px 20px;
+    margin: 11px 0px;
+    text-transform: capitalize;
+  }
+  .weatherdate2colmn {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    font-size: 18px;
+  }
+  .date{
+    margin: 0 auto;
+  }
+  .degree-line{
+    font-size: 30px;
+  }
+  .tempLowHigh {
+    box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+    border-radius: 24px;
+    border: 1px solid #a3aab0;
+  }
+  .tempLowHigh .row{
+    margin: 0px 10px;
+  }
+  .tempLowHigh .col-5 {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px;
+  }
+  .tempLowHigh p {
+    margin: 0px;
+  }
+  .weathermarkers {
+    text-align: center;
+    padding-top: 30px;
+  }
+  .weathermarkers p{
+    margin: 0 auto;
+  }
+  .weathermarkers div.col-2 {
+    padding: 0px 3px;
+  }
+  .vl {
+    border-left: 2px solid #a3aab0;
+    position: absolute;
+    height: 50px;
+  }
+  .vldiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .value {
+    box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+    border: 3px solid none;
+    border-radius: 16px;
+    background-color: #b9b9b93a;
+    font-size: 18px;
+    padding: 3px 0 3px 0;
+  }

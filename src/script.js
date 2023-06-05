@@ -16,25 +16,35 @@ dayElement.innerHTML = days[day];
 
 function searchCity(city){
   let apiKey= `2f0dea016bed96ccfde24c9fe8409b1f`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-  axios.get(apiUrl).then(displayWeather);
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
+  .then(response => response.json())
+  .then(data => displayWeather(data))
+
+  //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  //axios.get(apiUrl).then(displayWeather);
 }
 
 function searchLocation(position){
   let apiKey= `2f0dea016bed96ccfde24c9fe8409b1f`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
-  console.log(apiUrl);
-  axios.get(apiUrl).then(displayWeather);
+  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`)
+  .then(response => response.json())
+  .then(data => displayWeather(data))
+  
 }
 
 function displayWeather(response){
+  console.log(response);
+  document.querySelector("#city").innerHTML= response.name;
+  document.querySelector("#degrees").innerHTML= Math.round(response.main.temp);
+  document.querySelector("#wind").innerHTML= Math.round(response.wind.speed);
+  document.querySelector("#humidity").innerHTML= response.main.humidity;
+  document.querySelector("#description").innerHTML= response.weather[0].description;
+  document.querySelector("#weather-icon").innerHTML= response.weather[0].icon;
+  document.querySelector("#lowTemp").innerHTML= Math.round(response.main.temp_min);
   
-  document.querySelector("#city").innerHTML= response.data.name;
-  document.querySelector("#degrees").innerHTML= Math.round(response.data.main.temp);
-  document.querySelector("#wind").innerHTML= Math.round(response.data.wind.speed);
-  document.querySelector("#humidity").innerHTML= response.data.main.humidity;
-  document.querySelector("#description").innerHTML= response.data.weather[0].description;
-  document.querySelector("#weather-icon").innerHTML= response.data.weather[0].icon;
+  document.querySelector("#highTemp").innerHTML= Math.round(response.main.temp_max);
+  
+  
 
 }
 
@@ -44,6 +54,7 @@ function displayCurrentWeather(event){
 }
 
 function handleSubmit(event) {
+    
   event.preventDefault();
   let cityInput= document.querySelector("#search");
   let city= cityInput.value;

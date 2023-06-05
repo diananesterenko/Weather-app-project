@@ -10,7 +10,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
 </head>
@@ -21,8 +21,10 @@
             
             <form action="" class="form1" id="forminput">
                 <div class="row">
-                    <div class="col-5"><input id="search" class="search" type="search" placeholder="Search" /></div>
-                    <div class="col-2"> <input type="submit" class="submit" value="Search" /></div>
+                    <div class="col-6"><input id="search" class="search" type="search" placeholder="Search" /></div>
+                    <div class="col-1"></div>
+                    <div class="col-2"> <input type="submit" class="submit" value="" /></div>
+                   
                     <div class="col-2"><input type="" class="submit" id="current" value="Current" /></div>
                 </div>
                 
@@ -31,45 +33,52 @@
             </form>
 
             <div class="city-date">
-                <h2 id="city">Australia</h2>
+                <h2 id="city"></h2>
                 <div class="row">
                     <div class="col-5" >
                         <p id="description">Sunny</p>
                         <p id="weather-icon">  </p>
                     </div>
                     <div class="col-1"></div>
-                    <div class="col-6">
+                    <div class="col-6 weatherdate2colmn">
                         <div class="date">
-                        <div class="row" ><p id="degrees"> 21 </p><p>°C</p></div> 
+                        <div class="row degree-line" ><strong id="degrees"></strong><p>°C</p></div> 
                         <div class="row"><p id="day">Monday</p></div>
                         <div class="row"><p id="hours">10</p>: <p id="minutes">10</p> </div>
+                        </div>
+                        <div class="tempLowHigh">
+                            <div class="row">
+                                
+                                <div class="col-5">
+                                   <span id="lowTemp">7</span> <span> °</span>
+                                   <p>Low</p>
+                                </div>
+                                <div class="col-5">
+                                    <span id="highTemp">17</span> <span> °</span>
+                                    <p>High</p>
+                                 </div>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="weather-markers row">
-                <div class="col-2">
-                    <p>wind</p>
-                    <span id="wind">12</span> <span>km/h</span>
-                </div>
-                <div class="col-1"></div>
-                <div class="col-2">
-                    <p>humidity</p>
-                    <span id="humidity">1</span> <span>%</span>
-                </div>
-                <div class="col-1"></div>
-                <div class="col-2">
-                    <p>sunrise</p>
-                    <p>6:22</p>
-                </div>
-                <div class="col-1"></div>
-                <div class="col-2">
-                    <p>sunset</p>
-                    <p>21:20</p>
-                </div>
+    
+
+                <div class="col-2 "><p>Wind</p><div class="value" id="wind">3km/h</div></div>
+                <div class="col-1 vldiv"><div class="vl"></div></div>   
+                <div class="col-2"><p id="pHum">Humidity</p><div class="value" id="humidity">0%</div></div>
+                <div class="col-2 vldiv"><div class="vl"></div></div>
+                 
+                <div class="col-2 "><p>Sunrise</p><div class="value" id="sunrise">05:27</div></div>
+                <div class="col-1 vldiv"><div class="vl"></div></div>
+                <div class="col-2"><p>Sunset</p><div class="value" id="sunset">21:32</div></div>
+                
+                
             </div>
         </div>
     </div>
-    <script src="src/src/script.js"></script>
+    <script src="src/script.js"></script>
 </body>
 </html>
