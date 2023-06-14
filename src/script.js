@@ -147,6 +147,7 @@ function displayWeather(response){
   document.querySelector("#highTemp").textContent= Math.round(response.main.temp_max);
   document.querySelector("#sunrise").textContent = formatDate(response.sys.sunrise*1000);
   document.querySelector("#sunset").textContent = formatDate(response.sys.sunset*1000);
+  document.querySelector("#feels").textContent= `${Math.round(response.main.feels_like)}°C`;
   let mainIcon= document.querySelector("#weather-icon");
   mainIcon.setAttribute("alt", response.weather[0].description);
   mainIcon.setAttribute("src", choosePicure(response.weather[0].icon));
@@ -187,11 +188,11 @@ function displayWeekForecast(response){
   
 }
 
-function displayCurrentWeather(event){
-  event.preventDefault();
+function displayCurrentWeather(){
+ 
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-
+displayCurrentWeather( );
 function handleSubmit(event) {
     
   event.preventDefault();

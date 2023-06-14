@@ -11,12 +11,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://kit.fontawesome.com/9726fcd8ce.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
 </head>
 <body>
     <div class="container">
-        <div class="weather-app">
+        <article class="weather-app">
             <h1>Weather Forecast</h1>
             
             <form action="" class="form1" id="forminput">
@@ -32,7 +33,7 @@
                 
             </form>
 
-            <div class="city-date">
+            <section class="city-date">
                 <h2 id="city"></h2>
                 <div class="row city-date-main">
                     <div class="col-5 iconAndDiscr" >
@@ -68,13 +69,16 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="weather-markers ">
+            </section>
+            <section class="weather-markers ">
     
 
                 <div class="col2 row">
-                    <div class="col-5">
-                        <p id="markersLabel">Wind</p>
+                    <div class="col-5" id="markersLabel">
+                        <i class="fa-solid fa-wind" style="color: #212121;"></i>
+                        <span >Wind</span>
+                        
+                       
                     </div>
                     <div class="col-7">
                         <div class="value" id="wind">3</div>
@@ -82,8 +86,10 @@
                 </div>
                
                 <div class="col2 row" >
-                    <div class="col-5">
-                        <p id="markersLabel">Humidity</p>
+                    <div class="col-5" id="markersLabel">
+                        <i class="fa-solid fa-droplet" style="color: #212121;"></i>
+                        <span >Humidity</span>
+                        
                     </div>
                     <div class="col-7">
                         <div class="value" id="humidity">0</div>
@@ -91,11 +97,26 @@
                     
                     
                 </div>
+                <div class="col2 row" >
+                    <div class="col-5" id="markersLabel">
+                        <i class="fa-solid fa-temperature-three-quarters" style="color: #212121;"></i>
+                        <span >Feels like</span>
+                        
+                    </div>
+                    <div class="col-7">
+                        <div class="value" id="feels">0</div>
+                    </div>
+                    
+                    
+                </div>
+                
                 
                  
                 <div class="col2 row">
-                    <div class="col-5">
-                        <p id="markersLabel">Sunrise</p>
+                    <div class="col-5" id="markersLabel">
+                        <i class="fa-solid fa-sun" style="color: #212121;"></i>
+                        <span >Sunrise</span>
+                        
                     </div>
                     <div class="col-7">
                         <div class="value" id="sunrise">05:27</div>
@@ -107,8 +128,10 @@
                 </div>
                
                 <div class="col2 row">
-                    <div class="col-5">
-                        <p id="markersLabel">Sunset</p>
+                    <div class="col-5" id="markersLabel">
+                        <i class="fa-regular fa-moon" style="color: #212121;"></i>
+                        <span >Sunset</span>
+                        
                     </div>
                     <div class="col-7">
                         <div class="value" id="sunset">21:32</div>
@@ -119,14 +142,14 @@
                 </div>
                 
                 
-            </div>
-            <div class="row " >
+            </section>
+            <section class="row " >
                <div class="col-12 week-forecast" id="week-forecast">
 
                </div>
 
-            </div>
-        </div>
+            </section>
+        </article>
     </div>
     <script src="src/script.js"></script>
 </body>

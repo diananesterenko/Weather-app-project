@@ -7,8 +7,8 @@ body{
 }
 .weather-app{
     max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
+    margin: 10px auto 30px auto;
+    padding: 10px 20px 20px 20px;
     opacity: 0.9;
     border: 1px solid rgb(185, 185, 185);
     border-radius: 5px;
@@ -16,7 +16,11 @@ body{
 .weather-app h1 {
     color: rgb(209, 209, 209);
     text-shadow: 3px 3px rgba(0, 0, 0, 0.268);
-    font-size: 36px;
+    font-size: 32px;
+    
+  }
+  .form1 .row{
+    padding-left: 20px;
   }
 #city{
    font-size: 30px;
@@ -125,8 +129,8 @@ body{
 
   }
   #markersLabel{
-    text-align: center;
-    margin: 0 auto;
+    text-align: left;
+    padding-left: 20%;
     margin-bottom: 5px;
   }
   .weathermarkers .col2 {
